@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import products from "./product";
+
+import Product from "./components/Product/Product";
+import FormProduct from "./components/FormProduct/FormProduct";
+import { useState } from "react";
+
+console.log(products);
 
 function App() {
+  const [product, setProducts] = useState(products);
+  const [sum, setSum] = useState(0);
+
+  console.log(product);
+
+  function handelAddProduct(product) {
+    setProducts((products) => [...products, product]);
+    setSum(product.price + product.price);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>
+        <Product products={product} />
+
+        <FormProduct onHandelAdd={handelAddProduct} />
+      </div>
+      <p>{sum}</p>
     </div>
   );
 }

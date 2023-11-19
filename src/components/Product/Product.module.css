@@ -1,0 +1,14 @@
+.block {
+  width: 200px;
+  list-style-type: none;
+  /* border-radius: 50%;
+  width: 200px;
+  height: 200px; */
+  /* float: right; */
+}
+
+.block img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
