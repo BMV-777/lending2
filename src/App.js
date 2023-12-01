@@ -16,17 +16,27 @@ function App() {
 
   function handelAddProduct(product) {
     setProducts((products) => [...products, product]);
-    setSum(product.price + product.price);
+    setSum(console.log("ddd"));
+  }
+  //  setSum((item) =>
+  //    item.reduce(
+  //      (acc, curr) => acc + curr.product.price * curr.product.price,
+  //      0
+  //    )
+  //  );
+
+  function handelDeleteProduct(id) {
+    setProducts((products) => products.filter((item) => item.id !== id));
   }
 
   return (
-    <div className="App">
-      <div>
-        <Product products={product} />
+    <div className="app">
+      <div className="sidebar">
+        <Product products={product} onDeleteProduct={handelDeleteProduct} />
 
         <FormProduct onHandelAdd={handelAddProduct} />
+        <p>{sum}</p>
       </div>
-      <p>{sum}</p>
     </div>
   );
 }

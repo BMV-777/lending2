@@ -13,6 +13,7 @@ const FormProduct = ({ onHandelAdd }) => {
       id: crypto.randomUUID(),
       name,
       title: "",
+      quantity: 0,
       price: Math.trunc(Math.random() * 10) + 1,
     };
 

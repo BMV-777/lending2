@@ -1,9 +1,10 @@
-const ProductList = ({ product }) => {
+const ProductList = ({ product, onDeleteProduct }) => {
   return (
     <>
-      <li>
+      <li className="list-button">
         {/* <p>{product.title}</p> */}
         {product.name}: {product.price}$
+        <button onClick={() => onDeleteProduct(product.id)}>❌</button>
       </li>
     </>
   );
