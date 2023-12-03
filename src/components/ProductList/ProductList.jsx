@@ -3,7 +3,7 @@ const ProductList = ({ product, onDeleteProduct }) => {
     <>
       <li className="list-button">
         {/* <p>{product.title}</p> */}
-        {product.name}: {product.price}$
+        {product.name}: {product.quantity} price:{product.price}$
         <button onClick={() => onDeleteProduct(product.id)}>❌</button>
       </li>
     </>

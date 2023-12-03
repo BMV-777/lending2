@@ -3,17 +3,17 @@ import React, { useState } from "react";
 const FormProduct = ({ onHandelAdd }) => {
   // const [category, setCategory] = useState("");
   const [name, setName] = useState("");
+  const [quantity, setQuantity] = useState("");
 
   function handelSubmit(e) {
     e.preventDefault();
 
-    if (!name) return;
-
+    if (!name || !quantity) return;
     const newProduct = {
       id: crypto.randomUUID(),
       name,
       title: "",
-      quantity: 0,
+      quantity,
       price: Math.trunc(Math.random() * 10) + 1,
     };
 
@@ -22,6 +22,7 @@ const FormProduct = ({ onHandelAdd }) => {
 
     // setCategory("");
     setName("");
+    setQuantity("");
   }
 
   return (
@@ -31,6 +32,12 @@ const FormProduct = ({ onHandelAdd }) => {
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
+      />
+      <label>Quantity</label>
+      <input
+        type="text"
+        value={quantity}
+        onChange={(e) => setQuantity(Number(e.target.value))}
       />
 
       <button className="button">Add</button>
