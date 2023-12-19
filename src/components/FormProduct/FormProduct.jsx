@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const FormProduct = ({ onHandelAdd }) => {
-  // const [category, setCategory] = useState("");
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState("");
 
@@ -9,9 +8,10 @@ const FormProduct = ({ onHandelAdd }) => {
     e.preventDefault();
 
     if (!name || !quantity) return;
+
     const newProduct = {
       id: crypto.randomUUID(),
-      name,
+      name: name.toUpperCase(),
       title: "",
       quantity,
       price: Math.trunc(Math.random() * 10) + 1,
@@ -20,7 +20,6 @@ const FormProduct = ({ onHandelAdd }) => {
     onHandelAdd(newProduct);
     console.log(newProduct);
 
-    // setCategory("");
     setName("");
     setQuantity("");
   }

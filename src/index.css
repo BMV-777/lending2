@@ -52,8 +52,8 @@ button {
 
 .list-button > button {
   position: absolute;
-  top: -26px;
-  left: 150px;
+  top: -28px;
+  left: 190px;
   padding: 10;
   text-align: center;
 }

@@ -1,7 +1,6 @@
 const product = [
   {
     id: 1,
-    title: "Product",
     name: "Milk",
     price: 3,
     quantity: 3,
@@ -10,7 +9,6 @@ const product = [
   },
   {
     id: 2,
-    title: "Product",
     name: "Beer",
     price: 5,
     quantity: 2,
@@ -19,7 +17,6 @@ const product = [
   },
   {
     id: 3,
-    title: "Product",
     name: "Sneki",
     price: 7,
     quantity: 4,

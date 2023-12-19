@@ -1,7 +1,5 @@
 import ProductList from "../ProductList/ProductList";
 
-// import css from "./Product.module.css";
-
 const Product = ({ products, onDeleteProduct }) => {
   return (
     <ul className="itemList">
